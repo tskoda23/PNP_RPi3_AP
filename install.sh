@@ -27,7 +27,7 @@ echo "# -S    Log to syslog" >> $x
 echo "# -f    run in foreground" >> $x
 echo "DHCPD_OPTS=\"-S\"" >> $x
 sudo mv $x  /etc/default/udhcpd
-	#give the Pi a static IP address 
+	#give the Pi a static IP address
 sudo ifconfig wlan0 192.168.42.1
 #------------SETUP Station Interface for Rt5370-------------------------------------
 touch $x
@@ -48,7 +48,7 @@ echo "iface default inet dhcp" >> $x
 sudo chown --reference=/etc/network/interfaces $x
 sudo chmod --reference==/etc/network/interfaces $x
 sudo mv $x /etc/network/interfaces
-sudo cp /etc/network/interfaces /etc/network/interfaces.sta 
+sudo cp /etc/network/interfaces /etc/network/interfaces.sta
 sudo chmod --reference /etc/network/interfaces.bk /etc/network/interfaces.sta
 #------------------------------SETUP AP Interface for Rt5370-------------------------------
 touch  $x
@@ -122,4 +122,6 @@ sudo apt-get install dnsmasq -y
 sudo service dnsmasq start
 sudo update-rc.d dnsmasq enable
 sudo apt-get install udhcpc -y
-sudo cp ap.sh /usr/bin/ap
+sudo cp start_ap.sh /usr/bin/start_ap
+sudo cp stop_ap.sh /usr/bin/stop_ap
+
