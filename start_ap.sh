@@ -1,5 +1,6 @@
 #! /bin/bash
 sudo sed -i -e "s/\(ssid=\).*/\1$1/" /etc/hostapd/hostapd.conf
+sudo sed -i -e "s/\(passphrase=\).*/\1$2/" /etc/hostapd/hostapd.conf
 sudo /etc/init.d/hostapd stop
 sudo /etc/init.d/udhcpd stop
 sudo ifdown wlan0

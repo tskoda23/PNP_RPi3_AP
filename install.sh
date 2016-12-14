@@ -124,4 +124,6 @@ sudo update-rc.d dnsmasq enable
 sudo apt-get install udhcpc -y
 sudo cp start_ap.sh /usr/bin/start_ap
 sudo cp stop_ap.sh /usr/bin/stop_ap
+sudo chmod +x /usr/bin/start_ap
+sudo chmod +x /usr/bin/stop_ap
 

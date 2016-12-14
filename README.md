@@ -1,14 +1,16 @@
-# PNP_RPi3_AP
+# RPi3_AP
 RPi 3 as hotspot
 
 
 ### Installation
+sudo chmod +x install.sh
 sudo ./install.sh
 
 ### Usage
-to start ap
+#### Starting AP
 `sudo start_ap <Your_SSID> <Your_PASSWORD>`
-to stop
+
+#### Stopping AP
 `sudo stop_ap`
 
 Original repository is from [PNPTutorials](https://github.com/PNPtutorials/PNP_RPi3_AP). I just added script that stops ap.
