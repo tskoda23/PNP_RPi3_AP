@@ -3,8 +3,8 @@ RPi 3 as hotspot
 
 
 ### Installation
-sudo chmod +x install.sh
-sudo ./install.sh
+`sudo chmod +x install.sh`
+`sudo ./install.sh`
 
 ### Usage
 #### Starting AP
